@@ -31,8 +31,7 @@
 
 html, body {
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
-  @apply bg-secondary;
-  @apply font-body;
+  @apply bg-secondary font-body text-primary;
 }
 
 p {margin-bottom: 1rem;}

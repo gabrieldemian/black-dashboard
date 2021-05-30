@@ -23,6 +23,7 @@ export default function Home() {
       </Card>
 
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 grid-flow-row">
+        adasdasd
         <Card subtitle="By country" title="Sales">
           <Chart type="bar" data={salesDataCountry}>
             <Bar {...barTheme} fill="var(--brand-primary)" dataKey="tshirts" />
