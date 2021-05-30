@@ -4,14 +4,18 @@ import Link from 'next/link'
 import Svg from '../Svg'
 import { AnimateSharedLayout, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { useAside } from '~/contexts'
 
-const Aside: FC<Props> = ({ className }) => {
+const Aside: FC<Props> = ({ className, ref }) => {
+
   const { pathname } = useRouter()
+  const { setIsOpen } = useAside()
 
   return (
     <div
-      className="fixed"
-      style={{ height: 'calc(100vh - 2.5rem)', width: 'inherit' }}
+      className="fixed z-50"
+      style={{ height: '100vh', width: 'inherit' }}
+      ref={ref}
     >
       <div
         className={`rounded-md p-4 w-full h-full bg-gradient-to-b from-primary via-secondary to-pink-500 ${className}`}
@@ -26,6 +30,7 @@ const Aside: FC<Props> = ({ className }) => {
           {asideItems.map((item, index) => (
             <Link href={item.href} key={index}>
               <a
+                onClick={() => setIsOpen(false)}
                 className={`flex items-center py-2.5 transition hover:text-white ${
                   pathname === item.href ? 'text-white' : 'text-gray-300'
                 }`}

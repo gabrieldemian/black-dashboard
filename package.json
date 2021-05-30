@@ -9,6 +9,7 @@
     "prettier-fix": "prettier --write ."
   },
   "dependencies": {
+    "body-scroll-lock": "^3.1.5",
     "framer-motion": "^4.1.17",
     "next": "10.2.3",
     "next-seo": "^4.24.0",
@@ -19,6 +20,7 @@
     "recharts": "^2.0.9"
   },
   "devDependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/node": "^15.6.1",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.8",

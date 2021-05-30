@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import NProgress from 'nprogress'
 import { useRouter } from 'next/router'
+import { AsideProvider } from '~/contexts'
 
 function MyApp({ Component, pageProps }: any) {
   const router = useRouter()
@@ -19,37 +20,39 @@ function MyApp({ Component, pageProps }: any) {
 
   return (
     <ThemeProvider>
-      <DefaultSeo
-        title="Black Dashboard"
-        description="Elegant black dashboard"
-      />
+      <AsideProvider>
+        <DefaultSeo
+          title="Black Dashboard"
+          description="Elegant black dashboard"
+        />
 
-      <Nav />
+        <Nav />
 
-      <div className="flex mt-4">
-        <div className="w-2/12 hidden lg:block ml-8">
-          <Aside />
+        <div className="flex mt-4">
+          <div className="w-2/12 ml-8 hidden lg:block">
+            <Aside />
+          </div>
+
+          <motion.div
+            className="w-full lg:w-10/12"
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+                transition: { duration: 0.7 },
+              },
+              pageAnimate: {
+                opacity: 1,
+                transition: { duration: 0.7 },
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
         </div>
-
-        <motion.div
-          className="w-full lg:w-10/12"
-          key={router.route}
-          initial="pageInitial"
-          animate="pageAnimate"
-          variants={{
-            pageInitial: {
-              opacity: 0,
-              transition: { duration: 0.7 },
-            },
-            pageAnimate: {
-              opacity: 1,
-              transition: { duration: 0.7 },
-            },
-          }}
-        >
-          <Component {...pageProps} />
-        </motion.div>
-      </div>
+      </AsideProvider>
     </ThemeProvider>
   )
 }

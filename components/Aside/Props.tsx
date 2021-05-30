@@ -1,5 +1,8 @@
+import { Ref } from "react";
+
 export interface Props {
   className?: string
+  ref?: any
 }
 
 interface Item {
