@@ -22,7 +22,7 @@ export default function Home() {
         </Chart>
       </Card>
 
-      <div className="grid gap-x-4 grid-cols-1 lg:grid-cols-2 grid-flow-row">
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 grid-flow-row">
         <Card subtitle="By country" title="Sales">
           <Chart type="bar" data={salesDataCountry}>
             <Bar {...barTheme} fill="var(--brand-primary)" dataKey="tshirts" />
