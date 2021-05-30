@@ -15,10 +15,9 @@ import { lineTheme, salesData, salesDataCountry } from '~/utils'
 import { barTheme } from '~/utils/chartTheme'
 
 export default function Home() {
-
   return (
     <div className="container">
-      <Card subtitle="Monthly" title="Sales" className="mb-8 w-full">
+      <Card subtitle="Monthly" title="Sales" className="mb-4 w-full">
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={salesData}>
             <CartesianGrid stroke="var(--bg-secondary)" />
@@ -45,40 +44,52 @@ export default function Home() {
         </ResponsiveContainer>
       </Card>
 
-      <div className="flex flex-wrap">
-      <Card subtitle="By country" title="Sales" className="w-full lg:w-1/2">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart
-            data={salesDataCountry}
-          >
-            <CartesianGrid stroke="var(--bg-secondary)" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip content={<CustomTooltip />} />
-            <Legend />
-            <Bar {...barTheme} fill="var(--brand-primary)" dataKey="tshirts" />
-            <Bar {...barTheme} fill="var(--brand-secondary)" dataKey="shoes" />
-            <Bar {...barTheme} fill="var(--brand-terciary)" dataKey="pants" />
-          </BarChart>
-        </ResponsiveContainer>
-      </Card>
+      <div className="grid gap-x-4 grid-cols-1 lg:grid-cols-2 grid-flow-row">
+        <Card subtitle="By country" title="Sales">
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={salesDataCountry}>
+              <CartesianGrid stroke="var(--bg-secondary)" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend />
+              <Bar
+                {...barTheme}
+                fill="var(--brand-primary)"
+                dataKey="tshirts"
+              />
+              <Bar
+                {...barTheme}
+                fill="var(--brand-secondary)"
+                dataKey="shoes"
+              />
+              <Bar {...barTheme} fill="var(--brand-terciary)" dataKey="pants" />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
 
-      <Card subtitle="By country" title="Sales" className="w-full lg:w-1/2">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart
-            data={salesDataCountry}
-          >
-            <CartesianGrid stroke="var(--bg-secondary)" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip content={<CustomTooltip />} />
-            <Legend />
-            <Bar {...barTheme} fill="var(--brand-primary)" dataKey="tshirts" />
-            <Bar {...barTheme} fill="var(--brand-secondary)" dataKey="shoes" />
-            <Bar {...barTheme} fill="var(--brand-terciary)" dataKey="pants" />
-          </BarChart>
-        </ResponsiveContainer>
-      </Card>
+        <Card subtitle="By country" title="Sales">
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={salesDataCountry}>
+              <CartesianGrid stroke="var(--bg-secondary)" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend />
+              <Bar
+                {...barTheme}
+                fill="var(--brand-primary)"
+                dataKey="tshirts"
+              />
+              <Bar
+                {...barTheme}
+                fill="var(--brand-secondary)"
+                dataKey="shoes"
+              />
+              <Bar {...barTheme} fill="var(--brand-terciary)" dataKey="pants" />
+            </BarChart>
+          </ResponsiveContainer>
+        </Card>
       </div>
     </div>
   )
