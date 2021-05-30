@@ -5,6 +5,9 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+
+          <meta name="theme-color" content="var(--bg-secondary)" />
+
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
