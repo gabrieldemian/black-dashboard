@@ -29,7 +29,7 @@ export default function Nav(): ReactElement {
     <>
       <div className="z-10 bg-secondary container h-10 flex justify-between items-center fixed top-0 left-0 right-0">
         <div>
-          <small className="m-0">Dashboard</small>
+          <small className="m-0 text-white">Dashboard</small>
         </div>
 
         <div>

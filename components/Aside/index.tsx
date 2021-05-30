@@ -21,7 +21,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
         className={`rounded-md p-4 w-full h-full bg-gradient-to-b from-primary via-secondary to-pink-500 ${className}`}
       >
         <div className="mb-7 mt-5">
-          <p className="pb-5 border-b border-white mb-0 font-semibold">
+          <p className="pb-5 border-b border-white mb-0 font-semibold text-white">
             BLACKDASH
           </p>
         </div>

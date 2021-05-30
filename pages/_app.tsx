@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: any) {
   }, [router.events])
 
   return (
-    <ThemeProvider>
+    <ThemeProvider forcedTheme="dark">
       <AsideProvider>
         <DefaultSeo
           title="Black Dashboard"
