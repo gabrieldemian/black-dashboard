@@ -1,4 +1,4 @@
-import { ReactElement, Ref, useEffect, useRef } from 'react'
+import { ReactElement, useEffect, useRef } from 'react'
 import { useAside } from '~/contexts'
 import { Aside, Svg } from '~/components'
 import { motion } from 'framer-motion'
@@ -9,7 +9,8 @@ import {
 } from 'body-scroll-lock'
 
 export default function Nav(): ReactElement {
-  const ref = useRef<Ref<any> | any>({})
+  
+  const ref = useRef<HTMLDivElement>(null)
   const { setIsOpen, isOpen, isMobile } = useAside()
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import 'nprogress/nprogress.css'
+import '../styles/nprogress.css'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 import { Aside, Nav } from '~/components'

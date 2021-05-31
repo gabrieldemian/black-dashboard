@@ -1,6 +1,5 @@
 export interface Props {
-  children: any
-  subtitle: string
-  title: string
+  subtitle?: string
+  title?: string
   className?: string
 }
