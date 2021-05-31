@@ -22,4 +22,14 @@ export const asideItems: Item[] = [
     href: '/profile',
     icon: 'user',
   },
+  {
+    name: 'Messages',
+    href: '/messages',
+    icon: 'message',
+  },
+  {
+    name: 'Calendar',
+    href: '/calendar',
+    icon: 'calendar',
+  },
 ]
