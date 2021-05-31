@@ -18,7 +18,8 @@
 
 html, body {
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
-  @apply bg-secondary font-body text-primary;
+  background: linear-gradient(to top left, var(--bg-primary), var(--bg-secondary));
+  @apply min-h-screen font-body text-primary bg-secondary;
 }
 
 p {margin-bottom: 1rem;}
