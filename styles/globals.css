@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root, .dark, [data-theme="dark"] {
   --bg-primary: #131416;
   --bg-secondary: #1c1c1c;
   --bg-accent: rgb(255, 38, 98);
@@ -13,20 +13,7 @@
   --brand-primary: #DA145A;
   --brand-secondary: #DA3114;
   --brand-terciary: #DA14BD;
-}
-
-.dark, [data-theme="dark"] {
-  --bg-primary: #131416;
-  --bg-secondary: #1c1c1c;
-  --bg-accent: rgb(255, 38, 98);
-  --text-primary: #cecece;
-  --text-secondary: rgb(206, 206, 206);
-  --text-accent: rgb(255, 38, 98);
-
-  --brand-primary: #DA145A;
-  --brand-secondary: #DA3114;
-  --brand-terciary: #DA14BD;
-
+  --brand-green: '#14DA94'
 }
 
 html, body {

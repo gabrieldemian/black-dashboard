@@ -1,7 +1,7 @@
-import { Line, Bar } from 'recharts'
+import { Line, Bar, Area } from 'recharts'
 import { Card, Chart } from '~/components'
-import { lineTheme, salesData, salesDataCountry } from '~/utils'
-import { barTheme } from '~/utils/chartTheme'
+import { lineTheme, reviewsData, salesData, salesDataCountry } from '~/utils'
+import { areaTheme, barTheme } from '~/utils/chartTheme'
 
 export default function Home() {
   return (
@@ -31,11 +31,28 @@ export default function Home() {
           </Chart>
         </Card>
 
-        <Card subtitle="By country" title="Sales">
-          <Chart type="bar" data={salesDataCountry}>
-            <Bar {...barTheme} fill="var(--brand-primary)" dataKey="tshirts" />
-            <Bar {...barTheme} fill="var(--brand-secondary)" dataKey="shoes" />
-            <Bar {...barTheme} fill="var(--brand-terciary)" dataKey="pants" />
+        <Card subtitle="good and bad" title="Clients feedback">
+          <Chart type="area" data={reviewsData}>
+            <defs>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#14DA94" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#14DA94" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#DA145A" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#DA145A" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              dataKey="positive"
+              fill="url(#colorPv)"
+              {...areaTheme}
+            />
+            <Area
+              dataKey="negative"
+              fill="url(#colorUv)"
+              {...areaTheme}
+            />
           </Chart>
         </Card>
       </div>

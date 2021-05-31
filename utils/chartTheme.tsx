@@ -9,4 +9,10 @@ const barTheme: any = {
   strokeWidth: 2,
 }
 
-export { lineTheme, barTheme }
+const areaTheme: any = {
+  stroke: 'none',
+  type: "natural",
+  fillOpacity: 1
+}
+
+export { lineTheme, barTheme, areaTheme }

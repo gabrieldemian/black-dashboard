@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   BarChart,
+  AreaChart,
 } from 'recharts'
 import CustomTooltip from '../CustomTooltip'
 
@@ -16,7 +17,7 @@ export default function Chart({
   children,
   height = 300,
   data,
-  dataKey = 'name'
+  dataKey = 'name',
 }: Props): any {
   const renderType = (): any => {
     switch (type) {
@@ -41,6 +42,16 @@ export default function Chart({
             <Legend />
             {children}
           </BarChart>
+        )
+      case 'area':
+        return (
+          <AreaChart data={data}>
+            <CartesianGrid stroke="var(--bg-secondary)" />
+            <XAxis dataKey={dataKey} />
+            <YAxis />
+            <Tooltip content={<CustomTooltip />} />
+            {children}
+          </AreaChart>
         )
       default:
         return null
