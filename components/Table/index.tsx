@@ -1,21 +1,41 @@
 import { ReactElement } from 'react'
 import { Props } from './Props'
-import { useSortBy, useTable } from 'react-table'
+import { Row, usePagination, useSortBy, useTable } from 'react-table'
 import Svg from '../Svg'
 
 export default function Table({ columns, data }: Props): ReactElement {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-      },
-      useSortBy
-    )
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    prepareRow,
+    page,
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    pageCount,
+    rows,
+    gotoPage,
+    nextPage,
+    previousPage,
+    setPageSize,
+    state: { pageIndex, pageSize },
+  } = useTable(
+    {
+      columns,
+      data,
+      initialState: { pageIndex: 0 },
+    },
+    useSortBy,
+    usePagination
+  )
 
   return (
-    <div className="bg-primary rounded-2xl py-4 overflow-auto">
-      <table {...getTableProps()} className="w-full bg-primary rounded-2xl overflow-auto">
+    <div className="bg-primary rounded-2xl overflow-auto">
+      <table
+        {...getTableProps()}
+        className="w-full bg-primary rounded-2xl overflow-auto"
+      >
         <thead className="overflow-y-auto overflow-x-hidden">
           {headerGroups.map((headerGroup: any) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -42,8 +62,11 @@ export default function Table({ columns, data }: Props): ReactElement {
           ))}
         </thead>
 
-        <tbody {...getTableBodyProps()} className="overflow-y-scroll overflow-x-hidden">
-          {rows.map((row, i) => {
+        <tbody
+          {...getTableBodyProps()}
+          className="overflow-y-scroll overflow-x-hidden"
+        >
+          {page.map((row: Row, i: number) => {
             prepareRow(row)
             return (
               <tr {...row.getRowProps()}>
@@ -62,6 +85,22 @@ export default function Table({ columns, data }: Props): ReactElement {
           })}
         </tbody>
       </table>
+      <div style={{justifyContent: 'flex-end', padding: '1rem'}} className="flex items-center">
+        <p className="mb-0">{rows.length} Results</p>
+        
+        {/* <select
+          value={pageSize}
+          onChange={(e) => {
+            setPageSize(Number(e.target.value))
+          }}
+        >
+          {[10, 20, 30, 40, 50].map((pageSize: number) => (
+            <option key={pageSize} value={pageSize}>
+              Show {pageSize}
+            </option>
+          ))}
+        </select> */}
+      </div>
     </div>
   )
 }

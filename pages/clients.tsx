@@ -36,6 +36,14 @@ export default function clients({}: Props): ReactElement {
     { name: 'Radamer Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
     { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
     { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
+    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 987263009' },
+    { name: 'Radamer Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
+    { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
+    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
+    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 987263009' },
+    { name: 'Radamer Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
+    { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
+    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
   ]
 
   return (

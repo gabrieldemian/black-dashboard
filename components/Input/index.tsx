@@ -9,18 +9,40 @@ export default function Input({
   placeholder,
   type = 'text',
   id = Math.random() + '',
+  value,
+  onChange
 }: Props): ReactElement {
   return (
     <>
-      {type && (
+      {type !== 'select' && (
         <div className={`${s.wrapper} ${className}`}>
           {icon && (
             <label htmlFor={id} className={s.icon}>
               <Svg icon={icon} />
             </label>
           )}
-          <input id={id} type={type} placeholder={placeholder} className={s.input} />
+          <input
+            id={id}
+            type={type}
+            placeholder={placeholder}
+            className={s.input}
+          />
         </div>
+      )}
+
+      {type === 'select' && (
+        <select
+          value={value}
+          onChange={(e) => {
+            onChange(e.target.value)
+          }}
+        >
+          {[10, 20, 30, 40, 50].map((pageSize: number) => (
+            <option key={pageSize} value={pageSize}>
+              Show {pageSize}
+            </option>
+          ))}
+        </select>
       )}
     </>
   )

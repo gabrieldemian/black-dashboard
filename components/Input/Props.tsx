@@ -5,4 +5,6 @@ export interface Props {
   placeholder?: string
   type?: string
   id?: any
+  value?: any
+  onChange?: Function | undefined
 }
