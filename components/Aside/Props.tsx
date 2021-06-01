@@ -26,4 +26,9 @@ export const asideItems: Item[] = [
     href: '/messages',
     icon: 'message',
   },
+  {
+    name: 'Clients',
+    href: '/clients',
+    icon: 'users',
+  },
 ]

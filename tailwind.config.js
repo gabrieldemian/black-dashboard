@@ -35,6 +35,13 @@ module.exports = {
         primary: '#da145a',
         secondary: '#dd2476',
       },
+      borderColor: (theme) => ({
+        ...theme('colors'),
+        bgPrimary: 'var(--bg-primary)',
+        bgSecondary: 'var(--bg-secondary)',
+        textSecondary: 'var(--text-secondary)',
+        accent: 'var(--bg-accent)',
+      }),
     },
   },
   variants: {

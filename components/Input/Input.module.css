@@ -1,0 +1,21 @@
+
+.wrapper {
+  @apply relative flex items-center text-secondary bg-primary p-3 shadow-lg rounded-lg;
+}
+
+.icon {
+  @apply flex items-center justify-center mr-2;
+}
+
+.input {
+  @apply w-full bg-transparent border-0 focus:ring-0 ring-0 text-accent
+}
+
+.label {
+  @apply ml-5;
+}
+
+.wrapper, .wrapper > * {
+  outline: none !important;
+  transition: all 0.8s ease-in-out;
+}
