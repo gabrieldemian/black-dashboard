@@ -14,7 +14,7 @@ export default function Table({ columns, data }: Props): ReactElement {
     )
 
   return (
-    <div className="bg-primary rounded-2xl py-4">
+    <div className="bg-primary rounded-2xl py-4 overflow-auto">
       <table {...getTableProps()} className="w-full bg-primary rounded-2xl overflow-auto">
         <thead className="overflow-y-auto overflow-x-hidden">
           {headerGroups.map((headerGroup: any) => (
