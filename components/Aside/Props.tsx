@@ -1,4 +1,3 @@
-import { Ref } from "react";
 
 export interface Props {
   className?: string
@@ -26,10 +25,5 @@ export const asideItems: Item[] = [
     name: 'Messages',
     href: '/messages',
     icon: 'message',
-  },
-  {
-    name: 'Calendar',
-    href: '/calendar',
-    icon: 'calendar',
   },
 ]
