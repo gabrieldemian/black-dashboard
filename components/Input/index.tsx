@@ -32,16 +32,17 @@ export default function Input({
       )}
 
       {type === 'select' && (
-        <select
-          value={value}
-          onChange={onChange}
-        >
-          {[10, 20, 30, 40, 50].map((pageSize: number) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
+        ''
+        // <select
+        //   value={value}
+        //   onChange={onChange}
+        // >
+        //   {[10, 20, 30, 40, 50].map((pageSize: number) => (
+        //     <option key={pageSize} value={pageSize}>
+        //       Show {pageSize}
+        //     </option>
+        //   ))}
+        // </select>
       )}
     </>
   )
