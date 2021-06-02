@@ -17,8 +17,8 @@
 }
 
 html, body {
-  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
-  background: linear-gradient(to top left, var(--bg-primary), var(--bg-secondary));
+  font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1600 - 300)));
+  /* background: linear-gradient(to top left, var(--bg-primary), var(--bg-secondary)); */
   @apply min-h-screen font-body text-primary bg-secondary;
 }
 

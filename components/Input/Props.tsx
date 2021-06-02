@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from "react";
 
 export interface Props {
   className?: string
@@ -6,5 +7,5 @@ export interface Props {
   type?: string
   id?: any
   value?: any
-  onChange?: Function | undefined
+  onChange?: ChangeEventHandler
 }

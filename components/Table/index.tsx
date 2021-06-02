@@ -1,9 +1,11 @@
 import { ReactElement } from 'react'
 import { Props } from './Props'
-import { Row, usePagination, useSortBy, useTable } from 'react-table'
-import Svg from '../Svg'
+import { Row, useFilters, usePagination, useTable } from 'react-table'
+import { Button } from '~/components'
+import { motion } from 'framer-motion'
 
 export default function Table({ columns, data }: Props): ReactElement {
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -12,49 +14,36 @@ export default function Table({ columns, data }: Props): ReactElement {
     page,
     canPreviousPage,
     canNextPage,
-    pageOptions,
-    pageCount,
     rows,
-    gotoPage,
     nextPage,
     previousPage,
-    setPageSize,
-    state: { pageIndex, pageSize },
   } = useTable(
     {
       columns,
       data,
-      initialState: { pageIndex: 0 },
     },
-    useSortBy,
+    useFilters,
     usePagination
   )
 
   return (
-    <div className="bg-primary rounded-2xl overflow-auto">
+    <div className="rounded-2xl overflow-auto">
       <table
         {...getTableProps()}
-        className="w-full bg-primary rounded-2xl overflow-auto"
+        className="w-full rounded-2xl overflow-auto"
+        style={{ borderSpacing: '0 1rem', borderCollapse: 'separate' }}
       >
         <thead className="overflow-y-auto overflow-x-hidden">
           {headerGroups.map((headerGroup: any) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
                 <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className="font-normal py-2 border-bgSecondary border"
+                  {...column.getHeaderProps()}
+                  className="font-normal py-2"
                 >
-                  <span className="flex items-center justify-center">
+                  <span className="flex flex-col flex-wrap items-center justify-center">
                     {column.render('Header')}
-                    {column.isSorted ? (
-                      column.isSortedDesc ? (
-                        <Svg icon="chevronDown" className="ml-1 h-4 w-4" />
-                      ) : (
-                        <Svg icon="chevronUp" className="ml-1 h-4 w-4" />
-                      )
-                    ) : (
-                      ''
-                    )}
+                    {column.canFilter ? column.render('Filter') : null}
                   </span>
                 </th>
               ))}
@@ -62,18 +51,22 @@ export default function Table({ columns, data }: Props): ReactElement {
           ))}
         </thead>
 
-        <tbody
+        <motion.tbody
+          layout
           {...getTableBodyProps()}
           className="overflow-y-scroll overflow-x-hidden"
         >
           {page.map((row: Row, i: number) => {
             prepareRow(row)
             return (
-              <tr {...row.getRowProps()}>
+              <tr
+                {...row.getRowProps()}
+                className="shadow-md transition hover:shadow-none"
+              >
                 {row.cells.map((cell) => {
                   return (
                     <td
-                      className="text-center font-light py-4 border-bgSecondary border"
+                      className="text-center font-light py-4 bg-primary first:rounded-l-lg last:rounded-r-lg"
                       {...cell.getCellProps()}
                     >
                       {cell.render('Cell')}
@@ -83,23 +76,30 @@ export default function Table({ columns, data }: Props): ReactElement {
               </tr>
             )
           })}
-        </tbody>
+        </motion.tbody>
       </table>
-      <div style={{justifyContent: 'flex-end', padding: '1rem'}} className="flex items-center">
-        <p className="mb-0">{rows.length} Results</p>
-        
-        {/* <select
-          value={pageSize}
-          onChange={(e) => {
-            setPageSize(Number(e.target.value))
-          }}
+      <div
+        style={{ justifyContent: 'flex-end', padding: '1rem' }}
+        className="flex items-center"
+      >
+        <Button
+          className="mr-2"
+          size="sm"
+          onClick={previousPage}
+          disabled={!canPreviousPage}
         >
-          {[10, 20, 30, 40, 50].map((pageSize: number) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select> */}
+          {'<-'}
+        </Button>
+        <Button
+          className="mr-4"
+          size="sm"
+          onClick={nextPage}
+          disabled={!canNextPage}
+        >
+          {'->'}
+        </Button>
+
+        <p className="mb-0">{rows.length} Results</p>
       </div>
     </div>
   )

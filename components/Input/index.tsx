@@ -22,6 +22,7 @@ export default function Input({
             </label>
           )}
           <input
+            onChange={onChange}
             id={id}
             type={type}
             placeholder={placeholder}
@@ -33,9 +34,7 @@ export default function Input({
       {type === 'select' && (
         <select
           value={value}
-          onChange={(e) => {
-            onChange(e.target.value)
-          }}
+          onChange={onChange}
         >
           {[10, 20, 30, 40, 50].map((pageSize: number) => (
             <option key={pageSize} value={pageSize}>

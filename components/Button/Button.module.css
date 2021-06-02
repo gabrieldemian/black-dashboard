@@ -1,0 +1,21 @@
+
+.button {
+  @apply rounded-lg font-semibold focus:outline-none disabled:opacity-50;
+}
+
+.sm {
+  @apply text-sm py-1.5 px-2.5;
+}
+
+.md {
+  @apply text-base py-2 px-4;
+}
+
+.full {
+  box-shadow: 0px 4px #BE185D;
+  @apply bg-accent;
+}
+
+.outline {
+  @apply border-accent border-2;
+}

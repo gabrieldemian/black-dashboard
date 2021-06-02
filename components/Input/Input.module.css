@@ -1,6 +1,6 @@
 
 .wrapper {
-  @apply relative flex items-center text-secondary bg-primary p-3 shadow-lg rounded-lg;
+  @apply relative flex items-center text-secondary bg-primary shadow-lg rounded-lg;
 }
 
 .icon {

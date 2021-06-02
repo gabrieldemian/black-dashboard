@@ -8,7 +8,7 @@ interface Props {
 
 export default function Svg({
   icon,
-  className = 'h-6 w-6',
+  className = 'h-5 w-5',
   onClick,
 }: Props): ReactElement {
   const icons: any = {
