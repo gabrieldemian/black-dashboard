@@ -22,6 +22,7 @@ export default function Input({
             </label>
           )}
           <input
+            value={value}
             onChange={onChange}
             id={id}
             type={type}

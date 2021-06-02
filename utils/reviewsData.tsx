@@ -1,4 +1,6 @@
-const reviewsData = [
+import { ReviewData } from "~/types"
+
+const reviewsData: ReviewData[] = [
   {
     name: 'Jan',
     positive: 4000,

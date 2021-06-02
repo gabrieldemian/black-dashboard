@@ -56,7 +56,7 @@ export default function Table({ columns, data }: Props): ReactElement {
           {...getTableBodyProps()}
           className="overflow-y-scroll overflow-x-hidden"
         >
-          {page.map((row: Row, i: number) => {
+          {page.map((row: Row) => {
             prepareRow(row)
             return (
               <tr

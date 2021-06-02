@@ -1,4 +1,6 @@
+import { Column } from "react-table";
+
 export interface Props {
-  data: any[]
-  columns: any[]
+  data: object[]
+  columns: Column<object>[]
 }

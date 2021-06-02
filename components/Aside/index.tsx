@@ -23,8 +23,6 @@ const Aside: FC<Props> = ({ className, ref }) => {
           </p>
         </div>
 
-        {/* bg-gradient-to-r from-primary via-secondary to-pink-500 */}
-
         <AnimateSharedLayout>
           {asideItems.map((item, index) => (
             <Link href={item.href} key={index}>

@@ -8,9 +8,11 @@ import { useEffect } from 'react'
 import NProgress from 'nprogress'
 import { useRouter } from 'next/router'
 import { AsideProvider } from '~/contexts'
+import { AppProps, NextRouter } from 'next/dist/next-server/lib/router/router'
 
-function MyApp({ Component, pageProps }: any) {
-  const router = useRouter()
+function MyApp({ Component, pageProps }: AppProps) {
+
+  const router: NextRouter = useRouter()
 
   useEffect(() => {
     router.events.on('routeChangeStart', () => NProgress.start())
@@ -22,7 +24,7 @@ function MyApp({ Component, pageProps }: any) {
     <ThemeProvider forcedTheme="dark">
       <AsideProvider>
         <DefaultSeo
-          title="Black Dashboard"
+          title="BlackDash"
           description="Elegant black dashboard"
         />
 

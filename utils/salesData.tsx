@@ -1,4 +1,6 @@
-const salesData = [
+import { SaleData } from "~/types"
+
+const salesData: SaleData[] = [
   {
     name: 'Jan',
     shoes: 4000,
@@ -66,7 +68,7 @@ const salesData = [
     pants: 2400,
   },
   {
-    name: 'Dez',
+    name: 'Dec',
     shoes: 7570,
     tshirts: 6100,
     pants: 4000,

@@ -1,16 +1,12 @@
-import React, { MouseEventHandler, ReactElement } from 'react'
-
-interface Props {
-  icon: string
-  className?: string
-  onClick?: MouseEventHandler
-}
+import React, { ReactElement, ReactNode } from 'react'
+import { Props } from './Props'
 
 export default function Svg({
   icon,
   className = 'h-5 w-5',
   onClick,
 }: Props): ReactElement {
+  
   const icons: any = {
     dashboard: (
       <svg

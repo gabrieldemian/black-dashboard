@@ -1,11 +1,11 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEvent } from "react";
 
 export interface Props {
   className?: string
   icon?: string | undefined
   placeholder?: string
-  type?: string
+  type?: any
   id?: any
   value?: any
-  onChange?: ChangeEventHandler
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }

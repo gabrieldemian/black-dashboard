@@ -7,7 +7,6 @@ export default function ColumnFilter({
   return (
     <Input
       onChange={(e: any) => {
-        console.log(e.target.value)
         setFilter(e.target.value || undefined) // Set undefined to remove the filter entirely
       }}
       value={filterValue || ''}

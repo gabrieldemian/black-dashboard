@@ -1,4 +1,6 @@
-const salesDataCountry = [
+import { SaleData } from "~/types"
+
+const salesDataCountry: SaleData[] = [
   {
     name: 'EUA',
     shoes: 4000,
