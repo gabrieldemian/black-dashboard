@@ -1,11 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from "next/document"
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-
           <meta name="theme-color" content="#1c1c1c" />
 
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -22,6 +21,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }

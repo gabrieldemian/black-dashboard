@@ -18,7 +18,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
     >
       <div className={`rounded-md w-full h-full bg-primary ${className}`}>
         <div className="mb-7 p-4">
-          <p className="pb-5 border-b border-white mb-0 font-semibold text-white">
+          <p className="pb-5 border-b border-white mb-0 text-white">
             BLACKDASH
           </p>
         </div>

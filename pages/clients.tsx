@@ -1,11 +1,11 @@
 import { ReactElement, useMemo } from 'react'
+import { Column } from 'react-table'
 import { Table } from '~/components'
 import ColumnFilter from '~/components/Table/ColumnFilter'
+import { ClientData } from '~/types'
 
-interface Props {}
-
-export default function clients({}: Props): ReactElement {
-  const columns: any = useMemo(
+export default function clients(): ReactElement {
+  const columns: Column<object>[] = useMemo(
     () => [
       {
         Header: 'Clients',
@@ -36,27 +36,26 @@ export default function clients({}: Props): ReactElement {
     []
   )
 
-  const data: any = [
-    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 987263009' },
-    { name: 'Gabriel Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
-    { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
-    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 987263009' },
-    { name: 'Radamer Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
-    { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
-    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 987263009' },
-    { name: 'Radamer Augusto', email: 'radax@gmail.com', location: 'Brasília / DF', phone: '61 987263009' },
-    { name: 'Gaúcho Bah', email: 'kcetinho@gmail.com', location: 'Gramado / RS', phone: '53 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
-    { name: 'Alguém Seila', email: 'seila@gmail.com', location: 'Acre / Acre', phone: '41 987263009' },
+  const data: ClientData[] = [
+    { name: 'Gabriel Costa', email: 'gcosta@gmail.com', location: 'Curitiba / PR', phone: '41 999999999' },
+    { name: 'Gabriel Augusto', email: 'gabaugusto@gmail.com', location: 'Brasília / DF', phone: '61 999999999' },
+    { name: 'Leni', email: 'leni@gmail.com', location: 'Gramado / RS', phone: '53 999999999' },
+    { name: 'Fulano fulano', email: 'seila@gmail.com', location: 'São Paulo / SP', phone: '41 999999999' },
+    { name: 'Guilherme Santos', email: 'gggsantos@gmail.com', location: 'Curitiba / PR', phone: '41 999999999' },
+    { name: 'Vinícius Martins', email: 'vinimartins@gmail.com', location: 'Brasília / DF', phone: '61 999999999' },
+    { name: 'José Ferreira', email: 'josephferreira@gmail.com', location: 'São Paulo / SP', phone: '53 999999999' },
+    { name: 'Maria Silva', email: 'mariasilva@gmail.com', location: 'Porto Alegre / RS', phone: '41 999999999' },
+    { name: 'Gabriel Costa', email: 'gabrielgcr45@gmail.com', location: 'Curitiba / PR', phone: '41 999999999' },
+    { name: 'Ana Ribeiro', email: 'anaribeiro@gmail.com', location: 'Brasília / DF', phone: '61 999999999' },
+    { name: 'Bruno Ramos', email: 'brunoramos@gmail.com', location: 'Gramado / RS', phone: '53 999999999' },
+    { name: 'Ciclano Fulano', email: 'ciclanofulano@gmail.com', location: 'São Paulo / SP', phone: '41 999999999' },
+    { name: 'Francisco xico', email: 'francisxico@gmail.com', location: 'Blumenau / SC', phone: '41 999999999' },
+    { name: 'Mitski', email: 'mitski@gmail.com', location: 'Joinville / SC', phone: '41 999999999' },
+    { name: 'Paloma Costa', email: 'palomacosta@gmail.com', location: 'Curitiba / PR', phone: '41 999999999' },
   ]
 
   return (
     <div className="container">
-      {/* <Input placeholder="Search" icon="search" className="p-4 text-sm" /> */}
       <Table data={data} columns={columns} />
     </div>
   )
