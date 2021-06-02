@@ -16,16 +16,16 @@ export const asideItems: Item[] = [
     href: '/',
     icon: 'dashboard',
   },
-  {
-    name: 'User Profile',
-    href: '/profile',
-    icon: 'user',
-  },
-  {
-    name: 'Messages',
-    href: '/messages',
-    icon: 'message',
-  },
+  // {
+  //   name: 'User Profile',
+  //   href: '/profile',
+  //   icon: 'user',
+  // },
+  // {
+  //   name: 'Messages',
+  //   href: '/messages',
+  //   icon: 'message',
+  // },
   {
     name: 'Clients',
     href: '/clients',
