@@ -28,7 +28,7 @@ export default function Nav(): ReactElement {
 
   return (
     <>
-      <div className="z-10 bg-secondary container h-10 flex justify-between items-center fixed top-0 left-0 right-0">
+      <div className="z-10 bg-secondary container h-14 flex justify-between items-center fixed top-0 left-0 right-0">
         <div>
           <small className="m-0 text-white">Dashboard</small>
         </div>
@@ -59,7 +59,7 @@ export default function Nav(): ReactElement {
       )}
 
       {/* Offset */}
-      <div className="h-10" />
+      <div className="h-14" />
     </>
   )
 }

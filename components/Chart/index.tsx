@@ -15,7 +15,7 @@ import CustomTooltip from '../CustomTooltip'
 export default function Chart({
   type = 'line',
   children,
-  height = 300,
+  height = 326,
   data,
   dataKey = 'name',
 }: Props): any {

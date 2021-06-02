@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { Props, asideItems } from './Props'
 import Link from 'next/link'
-import Svg from '../Svg'
 import { AnimateSharedLayout, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { useAside } from '~/contexts'
+import { Card, Svg } from '~/components'
 
 const Aside: FC<Props> = ({ className, ref }) => {
   const { pathname } = useRouter()
@@ -12,11 +12,11 @@ const Aside: FC<Props> = ({ className, ref }) => {
 
   return (
     <div
-      className="fixed z-50"
-      style={{ height: '100vh', width: 'inherit' }}
+      className="fixed z-50 shadow-sm p-0"
+      style={{ height: 'calc(100vh - 6rem)', width: 'inherit' }}
       ref={ref}
     >
-      <div className={`rounded-md w-full h-full bg-primary ${className}`}>
+      <Card className={`rounded-md w-full h-full bg-primay p-0 ${className}`}>
         <div className="mb-7 p-4">
           <p className="pb-5 border-b border-white mb-0 text-white">
             BLACKDASH
@@ -28,7 +28,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
             <Link href={item.href} key={index}>
               <a
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center py-2.5 transition hover:text-white relative ${
+                className={`flex items-center py-2.5 transition hover:text-white relative font-bold ${
                   pathname === item.href ? 'text-white' : 'text-gray-300'
                 }`}
               >
@@ -47,7 +47,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
             </Link>
           ))}
         </AnimateSharedLayout>
-      </div>
+      </Card>
     </div>
   )
 }
