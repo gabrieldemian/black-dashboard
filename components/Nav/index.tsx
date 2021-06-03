@@ -35,7 +35,6 @@ export default function Nav(): ReactElement {
 
         <div className="flex items-center gap-5">
           <Svg
-            onClick={() => setIsOpen(!isOpen)}
             icon="bell"
             className="cursor-pointer h-5 w-5"
           />
@@ -51,7 +50,6 @@ export default function Nav(): ReactElement {
             className="cursor-pointer h-5 w-5"
           />
           <Svg
-            onClick={() => setIsOpen(!isOpen)}
             icon="dotsVertical"
             className="cursor-pointer h-5 w-5"
           />

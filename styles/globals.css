@@ -17,6 +17,10 @@
   --brand-green: '#14DA94';
 }
 
+.page {
+  @apply container pr-0
+}
+
 html, body {
   font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1600 - 300)));
   @apply min-h-screen font-body text-primary bg-secondary;
