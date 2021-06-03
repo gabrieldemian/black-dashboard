@@ -64,7 +64,7 @@ export default function Svg({
       </svg>
     ),
 
-    user: (
+    dotsVertical: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={className}
@@ -76,7 +76,7 @@ export default function Svg({
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
         />
       </svg>
     ),

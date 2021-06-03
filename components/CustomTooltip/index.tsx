@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { Card } from '~/components'
 
 interface Props {
   active?: boolean
@@ -11,11 +12,11 @@ export default function CustomTooltip({
 }: Props): ReactElement | null {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-primary p-4 rounded-md">
+      <Card className="bg-secondary">
         {payload.map((item: any, index: number) => (
           <p key={index} className="mb-0">{`${item.name}: ${item.value}`}</p>
         ))}
-      </div>
+      </Card>
     )
   }
 

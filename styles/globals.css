@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root, .dark, [data-theme="dark"] {
-  --bg-primary: #1c1c1c;
+  --bg-primary: #1b1b1b;
   --bg-secondary: #131416;
   --bg-accent: rgb(255, 38, 98);
 
@@ -19,7 +19,6 @@
 
 html, body {
   font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1600 - 300)));
-  /* background: linear-gradient(to top left, var(--bg-primary), var(--bg-secondary)); */
   @apply min-h-screen font-body text-primary bg-secondary;
 }
 

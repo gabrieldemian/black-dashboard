@@ -7,9 +7,9 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock'
+import Image from 'next/image'
 
 export default function Nav(): ReactElement {
-  
   const ref = useRef<HTMLDivElement>(null)
   const { setIsOpen, isOpen, isMobile } = useAside()
 
@@ -33,10 +33,26 @@ export default function Nav(): ReactElement {
           <small className="m-0 text-white">Dashboard</small>
         </div>
 
-        <div>
+        <div className="flex items-center gap-5">
+          <Svg
+            onClick={() => setIsOpen(!isOpen)}
+            icon="bell"
+            className="cursor-pointer h-5 w-5"
+          />
+          <Image
+            className="rounded-full mr-2 cursor-pointer"
+            src="/euuu.jpg"
+            width={30}
+            height={30}
+          />
           <Svg
             onClick={() => setIsOpen(!isOpen)}
             icon="menu"
+            className="cursor-pointer h-5 w-5"
+          />
+          <Svg
+            onClick={() => setIsOpen(!isOpen)}
+            icon="dotsVertical"
             className="cursor-pointer h-5 w-5"
           />
         </div>
