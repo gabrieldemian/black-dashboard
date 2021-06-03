@@ -28,7 +28,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
       </div>
 
       <div className="h-full flex flex-col justify-between">
-        <div className="h-auto overflow-y-auto">
+        <div className="h-auto overflow-x-hidden overflow-y-auto">
           <AnimateSharedLayout>
             {asideItems.map((item, index) => (
               <Link href={item.href} key={index}>
