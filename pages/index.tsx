@@ -6,7 +6,7 @@ import { areaTheme, barTheme } from '~/utils/chartTheme'
 export default function Home() {
   return (
     <div className="container">
-      <Card subtitle="Monthly" title="Sales" className="mb-4 w-full">
+      <Card subtitle="Monthly" title="Sales" className="mb-4">
         <Chart data={salesData}>
           <Line
             {...lineTheme}

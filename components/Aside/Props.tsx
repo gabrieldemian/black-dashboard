@@ -22,3 +22,16 @@ export const asideItems: Item[] = [
     icon: 'users',
   },
 ]
+
+export const endItems: Item[] = [
+  {
+    name: 'Logout',
+    href: '/',
+    icon: 'logout'
+  },
+  {
+    name: 'Settings',
+    href: '/settings',
+    icon: 'cog'
+  }
+]

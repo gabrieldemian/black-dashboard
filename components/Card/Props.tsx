@@ -4,4 +4,5 @@ export interface Props {
   ref?: any
   className?: string
   style?: any
+  noPadding?: boolean
 }

@@ -35,6 +35,9 @@ module.exports = {
         primary: '#da145a',
         secondary: '#dd2476',
       },
+      width: {
+        'w-inherit': 'inherit'
+      },
       borderColor: (theme) => ({
         ...theme('colors'),
         bgPrimary: 'var(--bg-primary)',

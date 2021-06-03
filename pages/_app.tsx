@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Nav />
 
         <div className="flex mt-4">
-          <div className="w-2/12 ml-8 hidden lg:block">
+          <div className="w-2/12 ml-8 hidden lg:flex">
             <Aside />
           </div>
 
