@@ -17,4 +17,4 @@ yarn
 yarn dev
 ```
 
-![Tela inicial](https://res.cloudinary.com/gabrielcloud/image/upload/v1622648183/gabriel-portfolio/portfolio/blackdash_oqzsvv.png)
+![Tela inicial](https://res.cloudinary.com/gabrielcloud/image/upload/v1623190610/gabriel-portfolio/portfolio/blackdash_ihlgor.png)
