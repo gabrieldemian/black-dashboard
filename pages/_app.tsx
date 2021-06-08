@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
 
           <motion.div
-            className="w-full lg:w-10/12"
+            className="w-full lg:w-10/12 md:container"
             key={router.route}
             initial="pageInitial"
             animate="pageAnimate"

@@ -5,7 +5,7 @@ import { areaTheme, barTheme } from '~/utils/chartTheme'
 
 export default function Home() {
   return (
-    <div className="page">
+    <>
       <Card subtitle="Monthly" title="Sales" className="mb-4">
         <Chart data={salesData}>
           <Line
@@ -56,6 +56,6 @@ export default function Home() {
           </Chart>
         </Card>
       </div>
-    </div>
+    </>
   )
 }

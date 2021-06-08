@@ -55,8 +55,6 @@ export default function clients(): ReactElement {
   ]
 
   return (
-    <div className="page">
-      <Table data={data} columns={columns} />
-    </div>
+    <Table data={data} columns={columns} />
   )
 }
