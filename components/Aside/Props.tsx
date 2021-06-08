@@ -31,7 +31,7 @@ export const endItems: Item[] = [
   },
   {
     name: 'Settings',
-    href: '/settings',
+    href: '/',
     icon: 'cog'
   }
 ]

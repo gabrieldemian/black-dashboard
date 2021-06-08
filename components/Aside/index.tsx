@@ -58,7 +58,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
 
         <div className="p-8">
           {endItems.map((item, i) => (
-            <Link href={item.href}>
+            <Link href={item.href} key={i}>
               <a className="flex items-center transition hover:text-white font-semibold py-2.5">
                 <Svg icon={item.icon} />
                 <small className="ml-4">{item.name}</small>
