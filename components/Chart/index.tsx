@@ -15,7 +15,7 @@ import CustomTooltip from '../CustomTooltip'
 export default function Chart({
   type = 'line',
   children,
-  height = 326,
+  height = 308,
   data,
   dataKey = 'name',
 }: Props): any {
@@ -59,8 +59,10 @@ export default function Chart({
   }
 
   return (
-    <ResponsiveContainer width="100%" height={height}>
+    <div className="relative h-full w-full">
+      <ResponsiveContainer width="100%" height={height}>
       {renderType()}
     </ResponsiveContainer>
+    </div>
   )
 }

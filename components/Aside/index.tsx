@@ -14,9 +14,10 @@ const Aside: FC<Props> = ({ className, ref }) => {
 
   return (
     <Card
+      style={{width: 'inherit'}}
       noPadding
       className={cn(
-        `fixed flex flex-col w-[inherit] z-50 ${
+        `fixed flex flex-col z-50 ${
           !isMobile ? s.asideHeight : 'h-screen'
         }`,
         className
@@ -38,7 +39,7 @@ const Aside: FC<Props> = ({ className, ref }) => {
                     pathname === item.href ? 'text-white' : 'text-gray-300'
                   }`}
                 >
-                  <div className="z-[2] mx-8 flex">
+                  <div className="mx-8 flex" style={{zIndex: 2}}>
                     <Svg icon={item.icon} />
                     <small className="ml-4 mb-0">{item.name}</small>
                   </div>

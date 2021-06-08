@@ -2,55 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, .dark, [data-theme="dark"] {
+:root,
+.dark,
+[data-theme='dark'] {
   --bg-primary: #1b1b1b;
-  --bg-secondary: #131416;
+  --bg-secondary: #131313;
   --bg-accent: rgb(255, 38, 98);
 
   --text-primary: #cecece;
   --text-secondary: rgb(206, 206, 206);
   --text-accent: rgb(255, 38, 98);
 
-  --brand-primary: #DA145A;
-  --brand-secondary: #DA3114;
-  --brand-terciary: #DA14BD;
+  --brand-primary: #da145a;
+  --brand-secondary: #da3114;
+  --brand-terciary: #da14bd;
   --brand-green: '#14DA94';
 }
 
 .page {
-  @apply container pr-0
+  @apply container pr-0;
 }
 
-html, body {
+html,
+body {
   font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1600 - 300)));
   @apply min-h-screen font-body text-primary bg-secondary;
 }
 
-p {margin-bottom: 1rem;}
-
-h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1.38rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 2.488rem;
-}
-
-h2 {font-size: 2.074rem;}
-
-h3 {font-size: 1.728rem;}
-
-h4 {font-size: 1.44rem;}
-
-h5 {font-size: 1.2rem;}
-
-small, .text_small {font-size: 0.833rem;}
-
 *::selection {
   background-color: var(--text-accent);
-  color: var(--bg-primary)
+  color: var(--bg-primary);
 }

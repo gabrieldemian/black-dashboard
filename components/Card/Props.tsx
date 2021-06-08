@@ -5,4 +5,5 @@ export interface Props {
   className?: string
   style?: any
   noPadding?: boolean
+  height?: string
 }

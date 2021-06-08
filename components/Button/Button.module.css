@@ -1,6 +1,10 @@
 
 .button {
-  @apply rounded-lg font-semibold focus:outline-none disabled:opacity-50;
+  @apply rounded-lg font-semibold focus:outline-none;
+}
+
+.button[disabled] {
+  @apply opacity-50;
 }
 
 .sm {

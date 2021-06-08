@@ -1,5 +1,3 @@
-import '../styles/globals.css'
-import '../styles/nprogress.css'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 import { Aside, Nav } from '~/components'
@@ -9,6 +7,9 @@ import NProgress from 'nprogress'
 import { useRouter } from 'next/router'
 import { AsideProvider } from '~/contexts'
 import { AppProps, NextRouter } from 'next/dist/next-server/lib/router/router'
+import '../styles/globals.css'
+import '../styles/nprogress.css'
+import '../styles/typography.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 

@@ -8,11 +8,19 @@ export default function Card({
   title,
   className = '',
   noPadding,
+  height,
+  style,
   ...other
 }: PropsWithChildren<Props>): ReactElement {
   return (
     <div
-      className={cn(`bg-primary shadow-xl rounded-xl text-primary ${ noPadding ? 'p-0' : 'p-4' }`, className)}
+      style={style}
+      className={cn(
+        `bg-primary shadow-xl rounded-xl text-primary ${
+          noPadding ? 'p-0' : 'p-4'
+        }`,
+        className
+      )}
       {...other}
     >
       {subtitle && <small>{subtitle}</small>}
