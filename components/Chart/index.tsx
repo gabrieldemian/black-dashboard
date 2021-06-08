@@ -59,10 +59,8 @@ export default function Chart({
   }
 
   return (
-    <div className="relative h-full w-full">
-      <ResponsiveContainer width="100%" height={height}>
+    <ResponsiveContainer width="100%" height={height}>
       {renderType()}
     </ResponsiveContainer>
-    </div>
   )
 }

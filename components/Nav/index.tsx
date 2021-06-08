@@ -68,7 +68,7 @@ export default function Nav(): ReactElement {
             className="fixed inset-0 backdrop-filter backdrop-blur-sm z-30"
             onClick={() => setIsOpen(false)}
           />
-          <Aside ref={ref} className="w-[50vw] h-[100vh] z-50" />
+          <Aside ref={ref} className="z-50" />
         </motion.div>
       )}
 

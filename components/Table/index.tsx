@@ -39,7 +39,8 @@ export default function Table({ columns, data }: Props): ReactElement {
               {headerGroup.headers.map((column: any) => (
                 <th
                   {...column.getHeaderProps()}
-                  className="font-normal py-2 min-w-[180px]"
+                  style={{minWidth: 150}}
+                  className="font-normal py-2"
                 >
                   <span className="flex flex-col flex-wrap items-center justify-center">
                     {column.render('Header')}
