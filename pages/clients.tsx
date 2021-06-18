@@ -3,7 +3,7 @@ import { ReactElement, useMemo } from 'react'
 import { Column } from 'react-table'
 import ColumnFilter from '~/components/Table/ColumnFilter'
 import { ClientData } from '~/types'
-const Table = dynamic(() => import('../components/Table'), { loading: () => <p>Loading...</p>, ssr: false })
+const Table = dynamic(() => import('../components/Table'), { loading: () => <p>Loading...</p> })
 
 export default function clients(): ReactElement {
   const columns: Column<object>[] = useMemo(

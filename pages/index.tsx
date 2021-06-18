@@ -3,7 +3,7 @@ import { Line, Bar, Area } from 'recharts'
 import { Card } from '~/components'
 import { lineTheme, reviewsData, salesData, salesDataCountry } from '~/utils'
 import { areaTheme, barTheme } from '~/utils/chartTheme'
-const Chart = dynamic(() => import('../components/Chart'), { loading: () => <p>Loading...</p>, ssr: false })
+const Chart = dynamic(() => import('../components/Chart'), { loading: () => <p>Loading...</p> })
 
 export default function Home() {
   return (
