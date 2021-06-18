@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic'
 import { ReactElement, useMemo } from 'react'
 import { Column } from 'react-table'
-import { Table } from '~/components'
 import ColumnFilter from '~/components/Table/ColumnFilter'
 import { ClientData } from '~/types'
+const Table = dynamic(() => import('../components/Table'), { loading: () => <p>Loading...</p>, ssr: false })
 
 export default function clients(): ReactElement {
   const columns: Column<object>[] = useMemo(

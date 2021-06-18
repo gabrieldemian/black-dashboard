@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic'
 import { Line, Bar, Area } from 'recharts'
-import { Card, Chart } from '~/components'
+import { Card } from '~/components'
 import { lineTheme, reviewsData, salesData, salesDataCountry } from '~/utils'
 import { areaTheme, barTheme } from '~/utils/chartTheme'
+const Chart = dynamic(() => import('../components/Chart'), { loading: () => <p>Loading...</p>, ssr: false })
 
 export default function Home() {
   return (
@@ -43,16 +45,8 @@ export default function Home() {
                 <stop offset="95%" stopColor="#DA145A" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <Area
-              dataKey="positive"
-              fill="url(#colorPv)"
-              {...areaTheme}
-            />
-            <Area
-              dataKey="negative"
-              fill="url(#colorUv)"
-              {...areaTheme}
-            />
+            <Area dataKey="positive" fill="url(#colorPv)" {...areaTheme} />
+            <Area dataKey="negative" fill="url(#colorUv)" {...areaTheme} />
           </Chart>
         </Card>
       </div>
